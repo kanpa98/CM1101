@@ -17,7 +17,7 @@ item_laptop = {
 
     "description":
     "It has seen better days. At least it has a WiFi card!",
-    "mass": 1
+    "mass": 6
 }
 
 item_money = {
@@ -27,7 +27,7 @@ item_money = {
 
     "description":
     "This wad of cash is barely enough to pay your tuition fees.",
-    "mass": 1
+    "mass": 4
 }
 
 item_biscuits = {
@@ -45,7 +45,7 @@ item_pen = {
     "name": "a pen",
 
     "description": "A basic ballpoint pen.",
-    "mass":1
+    "mass": 1
 }
 
 item_handbook = {
@@ -57,11 +57,19 @@ item_handbook = {
     "mass": 1
 }
 
+item_goldenring = {
+    "id": "ring",
+    "name": "a ring to rule them all",
+    "description": "If you posses nothing but the ring, you would not need anything other than the ring.",
+    "mass": 5
+}
+
 item_list = { 
 	"id": item_id,
 	"laptop": item_laptop,
 	"biscuits": item_biscuits,
 	"pen": item_pen,
 	"handbook": item_handbook,
-	"money":item_money
+	"money":item_money,
+    "ring": item_goldenring
 }

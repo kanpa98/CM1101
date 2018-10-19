@@ -51,9 +51,9 @@ room_parking = {
 You can go south to the COMSC reception, or east to the
 general office.""",
 
-    "exits": {"east": "Office", "south": "Reception"},
+    "exits": {"east": "Office", "south": "Reception","west": "Mordor"},
 
-    "items": []
+    "items": [item_goldenring]
 }
 
 room_office = {
@@ -69,7 +69,13 @@ Queen's Buildings.""",
 
     "items": [item_pen]
 }
-
+room_mordor = {
+    "name": "Mordor",
+    "description":
+    """Drop the ring here Frodo, and YOU'RE WINNER!!!!!!""",
+    "exits":[],
+    "items": []
+}
 
 
 rooms = {
@@ -77,5 +83,6 @@ rooms = {
     "Admins": room_admins,
     "Tutor": room_tutor,
     "Parking": room_parking,
-    "Office": room_office
+    "Office": room_office,
+    "Mordor": room_mordor
 }

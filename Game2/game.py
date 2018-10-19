@@ -4,11 +4,15 @@ from map import rooms
 from player import *
 from items import *
 from gameparser import *
+
 def sum_carry_weight():
     total = 0
     for w in inventory:
         total += w["mass"]
         return total
+
+
+    
 
 
 
@@ -63,7 +67,7 @@ def print_room_items(room):
     pass
 
     if room["items"]== []:
-        print("")
+        None
     else: 
         print("There is " + list_of_items(room["items"]) + " here.")
         print("")
@@ -275,8 +279,8 @@ def execute_take(item_id):
         if current_item not in current_room["items"]:
             print("You cannot take that.")
         else:
-            if sum_carry_weight() + current_item["mass"] > 3:
-                print("You cannot carry more than 3 items at a a time, you are currently carrying " + str(sum_carry_weight))
+            if sum_carry_weight() + current_item["mass"] > 10:
+                print("You cannot carry more than 10Kg at a a time, you are currently carrying " + str(sum_carry_weight())+"KG")
             else:
                 inventory.append(current_item)
                 print("You picked up " + current_item["name"])
@@ -285,6 +289,7 @@ def execute_take(item_id):
                 print("")
 
                 current_room["items"].remove(current_item)
+
 
 
 
@@ -395,6 +400,7 @@ def main():
 
         # Execute the player's command
         execute_command(command)
+
 
 
 
